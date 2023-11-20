@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
     $mail->addAddress($email);
     $mail->isHTML(true);
     $mail->Subject = "Konfirmasi pendaftaran!";
-    $mail->Body = "HI, " . $nama . " Selamat Pendaftaran kamu telah berhasil!";
+    $mail->Body = "Hi, " . strtoupper($nama)  . " Selamat Pendaftaran kamu telah berhasil!";
 
     $mail->send();
 }
